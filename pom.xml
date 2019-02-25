@@ -25,6 +25,8 @@
 
     <junit-jupiter.version>5.4.0</junit-jupiter.version>
     <junit-platform.version>1.4.0</junit-platform.version>
+
+    <jacoco.version>0.8.3</jacoco.version>
   </properties>
 
   <dependencyManagement>
@@ -150,6 +152,26 @@
           </executions>
         </plugin>
 
+        <!-- REPORTING-->
+        <plugin>
+          <groupId>org.jacoco</groupId>
+          <artifactId>jacoco-maven-plugin</artifactId>
+          <version>${jacoco.version}</version>
+          <executions>
+            <execution>
+              <goals>
+                <goal>prepare-agent</goal>
+              </goals>
+            </execution>
+            <execution>
+              <id>report</id>
+              <phase>test</phase>
+              <goals>
+                <goal>report</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
         <!-- TESTING-->
         <plugin>
           <!-- Run/configure/report for unit tests -->
