@@ -24,5 +24,9 @@
 ### Visual Studio Code ###
 .vscode
 
+### Maven Wrapper ###
+/mvnw.cmd
+/mvnw
+/.mvn/
 
 */target/
