@@ -4,16 +4,16 @@
         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>lt.m33t</groupId>
-  <artifactId>m33t-parent</artifactId>
+  <groupId>lt.teledog</groupId>
+  <artifactId>teledog-parent</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>
-    <module>main-app</module>
+    <module>teledog-main-app</module>
   </modules>
 
-  <name>M33t App - Parent</name>
+  <name>TeleDog App - Parent</name>
 
   <properties>
     <java.version>1.8</java.version>

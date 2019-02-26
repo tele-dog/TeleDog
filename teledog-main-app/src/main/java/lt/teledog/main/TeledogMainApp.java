@@ -1,12 +1,12 @@
-package lt.m33t.main;
+package lt.teledog.main;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class M33tMainApp {
+public class TeledogMainApp {
 
     public static void main(final String[] args) {
-        SpringApplication.run(M33tMainApp.class, args);
+        SpringApplication.run(TeledogMainApp.class, args);
     }
 }
