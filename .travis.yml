@@ -2,11 +2,15 @@ language: java
 sudo: false
 jdk: oraclejdk8
 
+#env:
+#  global:
+#    - PATH=$HOME/.local/bin:$PATH
+
 stages:
   - compile
   - test
 #  - deploy
-  - code_coverage
+#  - code_coverage
 
 before_install:
   - chmod +x mvnw
@@ -16,15 +20,11 @@ install: true
 jobs:
   include:
     - stage: compile
-      name: "create mvn env"
+      name: "Compile project"
       script: ./mvnw clean install -DskipTests
 
     - stage: test
-      name: "unit tests"
-      script: ./mvnw surefire:test
-
-    - stage: code_coverage
-      name: "Codecov report"
+      name: "Codecov test report"
       script: "mvn cobertura:cobertura"
       after_success:
         - bash <(curl -s https://codecov.io/bash)
